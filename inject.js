@@ -1,6 +1,6 @@
 /*
-    DiscordFriendInvites 1.1.0
-    by woodendoors7
+    DiscordFriendInvites 1.1.1
+    /woodendoors7/DiscordFriendInvites
 */
 
 
@@ -377,20 +377,17 @@ async function getToken() {
 async function uninject() {
     window.XMLHttpRequest = window.__request;
 
+    window.removeEventListener('mousemove', divMove, true);
+    document.getElementById('header').removeEventListener('mousedown', mouseDown, false);
+    window.removeEventListener('mouseup', mouseUp, false);
 
-    window.removeEventListener('mousemove');
-    document.getElementById('header').removeEventListener('mousedown')
-    window.removeEventListener('mouseup')
     document.getElementById("mainWindow").remove();
     inject = null;
     createElement = null;
-    inject = null;
     fetchInvites = null;
     checkTheInfo = null;
     deleteInvites = null;
-    removeEventListener("mouseMove", window)
-    console.log("Goodbye!")
+    console.log("Goodbye!");
 }
-
 
 console.log("Hello!")
